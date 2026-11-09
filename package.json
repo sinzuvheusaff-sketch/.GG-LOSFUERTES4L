@@ -1,0 +1,18 @@
+{
+  "name": "banat-only-bot",
+  "version": "1.1.0",
+  "private": false,
+  "description": "Standalone Messenger Banat bot: triggers, humanizer, mimicker, memory, timing, and traffic protection. No AI, games, economy, database, music, RPG, or ECLIPSE services.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node supervisor.js",
+    "start:direct": "node index.js",
+    "check": "node --check supervisor.js && node --check fca-adapter.js && node --check index.js && node --check dashboard-api.js && node --check triggers.js && node --check banat-human.js && node --check banat-memory.js && node --check banat-randomizer.js && node --check banat-social.js && node --check banat-targeting.js && node --check banat-abbreviations.js && node --check human-mimic.js && node --check human-delay.js && node --check human-typing.js && node --check group-controls.js && node --check slash-banats.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "ws3-fca": "2.0.1"
+  }
+}
